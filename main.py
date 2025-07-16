@@ -116,12 +116,12 @@ async def main():
                     st.markdown(response)
 
     # --- Chat UI Below Everything ---
-    if st.session_state.conversation:
-        st.markdown("---")
-        st.markdown("### 🧕 Aunty's Rishta Chat History")
-        for msg in st.session_state.conversation:
-            with st.chat_message(msg["role"]):
-                st.markdown(msg["content"])
+    # if st.session_state.conversation:
+    #     st.markdown("---")
+    #     st.markdown("### 🧕 Aunty's Rishta Chat History")
+    #     for msg in st.session_state.conversation:
+    #         with st.chat_message(msg["role"]):
+    #             st.markdown(msg["content"])
 
 if __name__ == "__main__":
     asyncio.run(main())
