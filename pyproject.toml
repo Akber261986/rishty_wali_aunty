@@ -1,0 +1,13 @@
+[project]
+name = "rishty-wali-aunty"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.13"
+dependencies = [
+    "ddgs>=9.2.3",
+    "fastapi>=0.116.1",
+    "openai-agents>=0.1.0",
+    "streamlit>=1.46.1",
+    "uvicorn>=0.35.0",
+]

@@ -1,0 +1,23 @@
+[
+    
+    {"name": "Ghulam Akber", "age": 25, "gender": "groom", "title": "Python Developer"},
+    {"name": "Hamzah Syed", "age": 22, "gender": "groom", "title": "Data Analyst"},
+    {"name": "Muhammad Ramzan", "age": 28, "gender": "groom", "title": "DevOps Engineer"},
+    {"name": "Usman Javed", "age": 30, "gender": "groom", "title": "Full Stack Developer"},
+    {"name": "Talha Khan", "age": 26, "gender": "groom", "title": "Mobile App Developer"},
+    {"name": "Sameer Qureshi", "age": 24, "gender": "groom", "title": "Cloud Architect"},
+    {"name": "Ali Raza", "age": 29, "gender": "groom", "title": "Product Manager"},
+    {"name": "Saad Shah", "age": 27, "gender": "groom", "title": "Software Engineer"},
+    {"name": "Danish Ahmed", "age": 23, "gender": "groom", "title": "Machine Learning Engineer"},
+    {"name": "Zain Malik", "age": 31, "gender": "groom", "title": "UI/UX Designer"},
+    {"name": "Sania Baloch", "age": 23, "gender": "bride", "title": "Graphic Designer"},
+    {"name": "Areeba Memon", "age": 25, "gender": "bride", "title": "Product Manager"},
+    {"name": "Zara Sheikh", "age": 27, "gender": "bride", "title": "UX Designer"},
+    {"name": "Hina Jatoi", "age": 22, "gender": "bride", "title": "HR Specialist"},
+    {"name": "Mehwish Khan", "age": 26, "gender": "bride", "title": "Web Developer"},
+    {"name": "Amina Arif", "age": 28, "gender": "bride", "title": "Marketing Lead"},
+    {"name": "Noor Fatima", "age": 24, "gender": "bride", "title": "Backend Developer"},
+    {"name": "Iqra Sharif", "age": 29, "gender": "bride", "title": "UI Designer"},
+    {"name": "Sidra Anwar", "age": 30, "gender": "bride", "title": "Finance Analyst"},
+    {"name": "Rabia Naseem", "age": 31, "gender": "bride", "title": "Content Strategist"}
+]
