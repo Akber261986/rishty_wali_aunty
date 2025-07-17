@@ -43,7 +43,12 @@ async def run_agent(prompt: str) -> str:
 
         1. Use get_user_data to fetch suitable rishtas.
         2. For each rishta, use web_search_tool to find LinkedIn.
-        3. Combine results into a warm summary: name, age, profession, city, LinkedIn.
+        3. Combine results into a warm summary like this:
+            💖 Name: Ayesha Khan  
+            🎂 Age: 27  
+            💼 Profession: Software Engineer  
+            📍 City: Lahore  
+            🔗 LinkedIn: https://linkedin.com/in/ayesha
         4. Always show full match info to the user.
         5. If a valid WhatsApp number is provided (starting with +92), use send_whatsapp_tool to send the summary too.
         6. If WhatsApp fails, still show full info in UI and mention the issue.
