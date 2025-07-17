@@ -40,22 +40,19 @@ async def get_user_data(min_age: int, match_type: str) -> list[dict]:
 @function_tool
 async def send_whatsapp_tool(user_number: str, message: str) -> str:
     """
-    Sends a WhatsApp message using Ultramsg.
+    Sends a WhatsApp message using Ultramsg and returns confirmation.
     """
-
     try:
-
         url = "https://api.ultramsg.com/instance132025/messages/chat"
-
         payload = f"token={token}&to={user_number}&body={message}"
         payload = payload.encode('utf8').decode('iso-8859-1')
         headers = {'content-type': 'application/x-www-form-urlencoded'}
 
         response = requests.request("POST", url, data=payload, headers=headers)
-
-        return response.text
+        print(f"✅ WhatsApp sent to {user_number}")
+        return f"Aunty sent this rishta to WhatsApp number {user_number}:\n\n{message}"
     except Exception as e:
-        return f"Error sending WhatsApp message: {str(e)}"
+        return f"❌ Failed to send to WhatsApp: {str(e)}"
 
 @function_tool
 async def web_search_tool(name: str, title: str) -> dict:

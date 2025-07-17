@@ -35,19 +35,25 @@ def save_history(entry):
 
 # --- Agent Logic ---
 async def run_agent(prompt: str) -> str:
+
     agent = Agent(
         name="Rishty Wali Aunty",
         instructions="""
-        You are Rishty Wali Aunty, a warm and friendly matchmaker who speaks in a conversational, aunty-like tone (e.g., "Beta, let me find you a perfect match!"). 
-        Your job is to find suitable matches based on user preferences.
-        Use get_user_data to fetch initial match details, then use web_search_tool to gather LinkedIn profiles.
-        Present 2-3 matches in a friendly, summarized format (e.g., name, age, profession, city, linkedin profile). After presenting, inform the user that the same data has also been sent to WhatsApp (if number is provided).
-        Always repeat the full match summary in the UI response so the user can view it even if WhatsApp fails.
-        Keep responses concise, warm, and culturally appropriate, like a Pakistani aunty would.
-        If no matches are found, suggest tweaking preferences and ask for more details.
+        You are Rishty Wali Aunty, a warm and friendly matchmaker who speaks in a conversational, aunty-like tone.
+
+        1. Use get_user_data to fetch suitable rishtas.
+        2. For each rishta, use web_search_tool to find LinkedIn.
+        3. Combine results into a warm summary: name, age, profession, city, LinkedIn.
+        4. Always show full match info to the user.
+        5. If a valid WhatsApp number is provided (starting with +92), use send_whatsapp_tool to send the summary too.
+        6. If WhatsApp fails, still show full info in UI and mention the issue.
+
+        Keep tone warm and fun, like a real Pakistani aunty!
+        finally return the full summary
         """,
         tools=[get_user_data, web_search_tool, send_whatsapp_tool]
     )
+
     try:
         result = await Runner.run(
             starting_agent=agent,
@@ -114,14 +120,6 @@ async def main():
                 with response_placeholder.container():
                     st.markdown("### 🧕 Aunty's Rishta Summary")
                     st.markdown(response)
-
-    # --- Chat UI Below Everything ---
-    # if st.session_state.conversation:
-    #     st.markdown("---")
-    #     st.markdown("### 🧕 Aunty's Rishta Chat History")
-    #     for msg in st.session_state.conversation:
-    #         with st.chat_message(msg["role"]):
-    #             st.markdown(msg["content"])
 
 if __name__ == "__main__":
     asyncio.run(main())
